@@ -6,7 +6,7 @@ function Tooltip({position}) {
     return (
         <div className="inline-block mb-12 border-2 border-black relative bg-red-300 px-6 py-2 rounded-xl hover:bg-green-300" onMouseEnter={()=>setIsTooltipVisible(true)} onMouseLeave={()=>setIsTooltipVisible(false)}>
             Hover over me for {position} tooltip
-            <span className={`text-center py-1 absolute z-10 w-full ${isTooltipVisible?`inline-block border-b-2 border-red-300 rounded-b-xl -${position}-full`:`hidden`}`}>{position} Tooltip text</span>
+            <span className={`text-center py-1 absolute -${position}-full z-10 w-full ${isTooltipVisible?`inline-block border-b-2 border-red-300 rounded-b-xl`:`hidden`}`}>{position} Tooltip text</span>
         </div>
     )
 }
